@@ -1,0 +1,36 @@
+.input-group {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-image: url(img/eye.svg);
+    /* Reemplaza con la ruta de tu imagen de icono de ojo */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    /* Añade una capa superior para asegurarte de que el icono siempre esté visible */
+}
+
+#password {
+    padding-right: 30px;
+    /* Ajusta el espacio a la derecha para el icono */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total del input */
+}
+
+#warnings-container {
+    position: relative;
+}
+
+.warnings {
+    margin-top: 5px;
+    /* Ajusta el margen superior para separar el mensaje de error */
+}

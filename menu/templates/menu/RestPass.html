@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'menu/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/material-design-iconic-font.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/styles.css' %}">
+    <title>Confecciones AS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="{% url 'Resgis' %}" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'login' %}" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'Usuario1' %}" class="navbar-top-links">Mi cuenta</a>
+                </li> 
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'index' %}">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'Usuario1' %}">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="{% url 'index' %}">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="{% url 'marca' %}" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'productos' %}"
+                            class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'Resgis' %}" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'login' %}" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'contacto' %}"
+                            class="nav-menu-link">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-second">
+        <div class="banner-container ">
+            <h1>Confecciones AS</h1>
+            <h2>"Nunca es suficiente ropa, El placer de vestir bien"</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-one-third">
+                <div class="box">
+                    <h2 class="title is-4 has-text-centered">Recuperar Contraseña</h2>
+                    <br>
+                    <form action="" method="POST" id="form">
+                        <div class="form">
+                            <div class="field">
+                                <div class="control">
+                                    <input type="email" placeholder="Ingresa tu correo electrónico" class="input" id="email-input">
+                                    <label class="label">Correo electrónico</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary is-fullwidth" id="register-button">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Información</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Tienda</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'Resgis' %}">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'EditarUs' %}">Cambiar Datos de cuenta</a>  
+                    </ul>
+                </div>
+                
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#register-button').click(function (e) {
+                e.preventDefault();
+                var email = $('#email-input').val();
+    
+                var emailRegex = /^\S+@\S+\.\S+.{2,}$/;
+                if (email == '') {
+                    alert('Por favor ingresa tu correo electrónico.');
+                    return false;
+                } else if (!emailRegex.test(email)) {
+                    alert('Ingresa un correo electrónico válido.'); 
+                    return false;
+                }
+                // Si se llega a este punto, todos los campos están validados correctamente
+                alert('solicitud aceptada , Porfavor revise su correo electronico  ');
+                return true;
+            });
+        });
+    </script>
+    <script src="{% static 'menu/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

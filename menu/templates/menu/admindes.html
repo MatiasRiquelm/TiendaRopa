@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/ConfeccionesAS/css/bulma.min.css">
+    <link rel="stylesheet" href="/ConfeccionesAS/css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="/ConfeccionesAS/css/styles.css">
+    <link rel="stylesheet" href="/ConfeccionesAS/Carrito/estilo.css">
+
+    <script src="/ConfeccionesAS/Carrito/app.js" async></script>
+    <title>Productos</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="/ConfeccionesAS/Resgis.html" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="/ConfeccionesAS/login.html" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="/ConfeccionesAS/Usuario1.html" class="navbar-top-links">Mi cuenta</a>
+                </li>
+                <li class="navbar-top-item">
+                    <button class="boton-item modificar">Modificar navbar-top</button>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="/ConfeccionesAS/index.html">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="/ConfeccionesAS/Usuario1.html">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="/ConfeccionesAS/index.html">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="/ConfeccionesAS/marca.html" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="/ConfeccionesAS/Carrito/productos.html"
+                            class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="/ConfeccionesAS/Resgis.html" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="/ConfeccionesAS/login.html" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="/ConfeccionesAS/contacto.html"
+                            class="nav-menu-link">Contáctanos</a></li>
+                    <li class="navbar-menu-item">
+                        <button class="boton-item modificar">Modificar nav-menu</button>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-cover">
+        <div class="banner-container ">
+            <h1 class="titulo-banner">Confecciones AS</h1>
+        </div>
+        <div class="file is-centered">
+            <label class="file-label">
+                <input class="file-input" type="file" name="profile-pic" id="profile-pic-input">
+                <span class="file-cta">
+                    <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                        Cambiar Portada
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <br>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Croptop Mujer</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-1.png" alt="" class="img-item">
+                <span class="precio-item">$8.000</span>
+                <p>Croptop manga larga con cuello </p>
+                <br>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo" class="rojo-color">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Morado</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Croptop una manga sin cuello </span>
+                <img src="/ConfeccionesAS/Carrito/img/item-2.png" alt="" class="img-item">
+                <span class="precio-item">$6.000</span>
+                <p>Croptop de una sola manga cuello redondo </p>
+                <br>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Conjunto de Buzo</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-3.png" alt="" class="img-item">
+                <span class="precio-item">$22.000</span>
+                <p>Hermoso conjunto de buzo color crema para mujer </p>
+                <br>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="crema">Crema</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Jogger Mujer</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-4.png" alt="" class="img-item">
+                <span class="precio-item"> $12.000</span>
+                <p>Joggers en tela de buzo ligera con cintura elasticada y cordón ajustable</p>
+                <br>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="amarillo">Amarillo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                    <option value="Celeste">Celeste</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="morado">Morado</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Croptop Strapless Mujer</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-5.png" alt="" class="img-item">
+                <span class="precio-item">$3.000</span>
+                <p>Croptop de mujer con cuello</p>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Body Cuello redondo</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-6.png" alt="" class="img-item">
+                <span class="precio-item">$5.000</span>
+                <p>Croptop de mujer con cuello</p>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Polera sin mangas</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-7.png" alt="" class="img-item">
+                <span class="precio-item">$5.000</span>
+                <p>Hermosa polera corta sin mangas juvenil</p>
+                <br>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Polera manga corta</span>
+                <img src="/ConfeccionesAS/Carrito/img/item-8.JPG" alt="" class="img-item">
+                <span class="precio-item">$5.000</span>
+                <p>Croptop de mujer con cuello</p>
+                <select name="talla" class="select-talla">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <select name="color" class="select-color">
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <button class="boton-item eliminar">Eliminar</button>
+                <button class="boton-item modificar">Modificar</button>
+                <button class="boton-item bajar-precio">Bajar Precio</button>
+            </div>
+
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Nuestra Empresa</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/marca.html">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/admin/index.html">Acceso administrativo
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/login.html">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/Resgis.html">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/EditarUs.html">Cambiar Datos de cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="/ConfeccionesAS/index.html">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'menu/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/material-design-iconic-font.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/styles.css' %}">
+    <title>Confecciones AS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="{% url 'Resgis' %}" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'login' %}" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'Usuario1' %}" class="navbar-top-links">Mi cuenta</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'index' %}">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'Usuario1' %}">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="{% url 'index' %}">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="{% url 'marca' %}" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'productos' %}" class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'Resgis' %}" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'login' %}" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'contacto' %}" class="nav-menu-link">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-second">
+        <div class="banner-container ">
+            <h1>Confecciones AS</h1>
+            <h2>"Nunca es suficiente ropa, El placer de vestir bien"</h2>
+        </div>
+    </div>
+    <!-- Formulario de contacto-->
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-one-third">
+                <div class="box">
+                    <h2 class="title is-4 has-text-centered">Registro de usuario</h2>
+                    <br>
+                    <form action="" method="POST" id="form">
+                        <div class="form">
+                            <div class="grupo">
+                                <input type="text" name="nombre" id="nombre" required>
+                                <span class="barra"></span>
+                                <label for="nombre">Nombre</label>
+                                <p class="warnings" id="nombre-warnings"></p>
+                            </div>
+
+                            <div class="grupo">
+                                <input type="text" name="telefon" id="telefon" value="9" required>
+                                <span class="barra"></span>
+                                <label for="telefon">Numero Telefono</label>
+                                <p class="warnings" id="telefon-warnings"></p>
+                            </div>
+                            <div class="grupo">
+                                <input type="email" name="email" id="email" required>
+                                <span class="barra"></span>
+                                <label for="email">Correo</label>
+                                <p class="warnings" id="email-warnings"></p>
+                            </div>
+                            <div class="grupo">
+                                <textarea name="message" id="message" placeholder="Mensaje" required></textarea><span
+                                    class="barra"></span>
+                                <label for="mensaje"></label>
+                            </div>
+                            <button type="submit" id="login-button" disabled>Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Información</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Tienda</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'Resgis' %}">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'EditarUs' %}">Cambiar Datos de
+                                cuenta</a>
+                    </ul>
+                </div>
+
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#nombre").on("input", function () {
+                var nombre = $(this).val();
+                if (nombre == "") {
+                    $("#nombre-warnings").text("");
+                    $("#nombre").removeClass("invalid");
+                    $("#login-button").prop("disabled", true);
+
+                } else if (!isValidNombre(nombre)) {
+                    $("#nombre-warnings").text("Por favor ingrese un nombre valido (sin numeros ni !%&@) ");
+                    $("#nombre").addClass("invalid");
+                    $("#login-button").prop("disabled", true);
+                } else {
+                    $("#nombre-warnings").text("");
+                    $("#nombre").removeClass("invalid");
+                    $("#login-button").prop("disabled", false);
+                }
+            });
+            $("#telefon").on("input", function () {
+                var telefon = $(this).val();
+                if (telefon == "") {
+                    $("#telefon-warnings").text("");
+                    $("#telefon").removeClass("invalid");
+                    $("#login-button").prop("disabled", true);
+
+                } else if (!isValidTelefono(telefon)) {
+                    $("#telefon-warnings").text("Por favor ingrese un Telefono valido (9 xxxx xxxx)");
+                    $("#telefon").addClass("invalid");
+                    $("#login-button").prop("disabled", true);
+                } else {
+                    $("#telefon-warnings").text("");
+                    $("#telefon").removeClass("invalid");
+                    $("#login-button").prop("disabled", false);
+                }
+            });
+            $("#email").on("input", function () {
+                var email = $(this).val();
+                if (email == "") {
+                    $("#email-warnings").text("");
+                    $("#email").removeClass("invalid");
+                    $("#login-button").prop("disabled", true);
+                } else if (!isValidEmailAddress(email)) {
+                    $("#email-warnings").text("Por favor ingresa un correo válido (juanito@gmail.com)");
+                    $("#email").addClass("invalid");
+                    $("#login-button").prop("disabled", true);
+                } else {
+                    $("#email-warnings").text("");
+                    $("#email").removeClass("invalid");
+                    $("#login-button").prop("disabled", false);
+                }
+            });
+            function isValidEmailAddress(emailAddress) {
+                var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                return pattern.test(emailAddress);
+            }
+
+            function isValidNombre(nombre) {
+                var pattern = /^[a-zA-ZÀ-ÿ\s]{2,40}$/;
+                return pattern.test(nombre);
+            }
+            function isValidTelefono(telefon) {
+                var pattern = /^[9]\d{8}$/;
+                return pattern.test(telefon);
+            }
+            $("#form").on("submit", function (event) {
+                event.preventDefault();
+                var email = $("#email").val();
+                var nombre = $("#nombre").val();
+                var telefon = $("#telefon").val();
+                var mensaje = $("#message").val();
+                // Verificar que todos los campos estén validados correctamente
+                if (isValidEmailAddress(email) && isValidNombre(nombre) && isValidTelefono(telefon)) {
+                    // Mostrar la alerta de confirmación
+                    alert("Nos contactaremos en la brevedad C: ");
+                    $("#email").val("");
+                    $("#nombre").val("");
+                    $("#telefon").val("");
+                    $("#message").val("");
+                    // Aquí puedes redirigir a la página correspondiente
+                } else {
+                    // Mostrar mensaje de error si las credenciales no son válidas
+                    alert("Por favor, complete todos los campos correctamente.");
+                }
+                // y redirigir a la página correspondiente
+                // o mostrar un mensaje de error en caso de que las credenciales no sean válidas
+            });
+        });
+    </script>
+
+    <script src="{% static 'menu/js/main.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'menu/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/material-design-iconic-font.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/styles.css' %}">
+    <title>Confecciones AS</title>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="{% url 'Resgis' %}" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'login' %}" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'Usuario1' %}" class="navbar-top-links">Mi cuenta</a>
+                </li> 
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'index' %}">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'Usuario1' %}">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="{% url 'index' %}">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="{% url 'marca' %}" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'productos' %}"
+                            class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'Resgis' %}" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'login' %}" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'contacto' %}"
+                            class="nav-menu-link">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-second">
+        <div class="banner-container ">
+            <h1>Confecciones AS</h1>
+            <h2>"Nunca es suficiente ropa, El placer de vestir bien"</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <img src="{% static 'menu/img/img-brand-1.jpg' %}" alt="">
+            </div>
+            <div class="column is-half">
+                <h3 class="has-text-weight-bold">¡BIENVENIDOS! - ACERCA DE NOSOTROS</h3>
+                <p>Confecciones AS nace el año 2020 como un emprendimiento familiar en el área de diseño y creación de
+                    ropa para jóvenes. Nuestro objetivo es entregar un diseño único e innovador para que luzcas y te
+                    veas bien! "Moda es lo que compras, estilo es lo que haces con ella"
+                </p>
+                <P>
+                    Confecciones propias. Producto elaborado con la mejor selección de tela nacional.
+                </P>
+                <P>
+                    "La vida es demasiada corta para llevar ropa aburrida"
+                </P>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <img src="{% static 'menu/img/img-brand-3.jpg' %}">
+                <h3 class="has-text-weight-bold">REALIZAMOS CONCURSOS</h3>
+                <p>Para promonociar nuestros productos, realizamos constantemente Concursos en donde puedes ser el
+                    afortunado ganador de un conjunto Buzo + Polerones.</p>
+                <p>Revisa constantemente nuestras redes sociales y enterate de como participar.</p>
+            </div>
+            <div class="column is-half">
+
+                <img src="{% static 'menu/img/img-brand-2.jpg' %}">
+                <h3 class="has-text-weight-bold">PRODUCTOS DE CALIDAD</h3>
+                <p>Productos nacionales de la mejor calidad existente en el mercado, queremos asegurar la confianza que
+                    nos entrengan nuestros clientes ofreciendo los siguientes servicios:</p>
+                <p>El mejor precio: los mejores precios acordes al mercado.</p>
+                <p>Soporte: 24/7 activo, puedes contactarnos por nuestra página web o redes sociales.</p>
+                <p>Envío Gratis: envíos gratuitos por toda la región metropolitana.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Información</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Tienda</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'Resgis' %}">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'EditarUs' %}">Cambiar Datos de cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'menu/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

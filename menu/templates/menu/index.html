@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'menu/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/material-design-iconic-font.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/validacion.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
+    <title>Confecciones AS</title>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="{% url 'Resgis' %}" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'login' %}" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'Usuario1' %}" class="navbar-top-links">Mi cuenta</a>
+                </li> 
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'index' %}">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'Usuario1' %}">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="{% url 'index' %}">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="{% url 'marca' %}" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'productos' %}"
+                            class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'Resgis' %}" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'login' %}" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'contacto' %}"
+                            class="nav-menu-link">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-cover">
+        <div class="banner-container ">
+            <h1 class="title-cover">AS</h1>
+            <a class="btn btn-default" href="{% url 'productos' %}">Ver productos</a>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="api">Algunos de nuestros clientes: </h1>
+        <div class="clientes"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Nuestra Empresa</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="admin/index.html">Acceso administrativo
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'Resgis' %}">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'EditarUs' %}">Cambiar Datos de cuenta</a>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Pedidos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'menu/js/main.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'menu/js/api.js' %}"></script>
+
+</body>
+
+</html>

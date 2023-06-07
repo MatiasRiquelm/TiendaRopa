@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'menu/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/material-design-iconic-font.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/styles.css' %}">
+    <title>Confecciones AS</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-top">
+            <ul class="navbar-top-ul">
+                <li class="navbar-top-item">
+                    <a href="{% url 'Resgis' %}" class="navbar-top-links">Registro</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'login' %}" class="navbar-top-links">Iniciar sesión</a>
+                </li>
+                <li class="navbar-top-item">
+                    <a href="{% url 'Usuario1' %}" class="navbar-top-links">Mi cuenta</a>
+                </li> 
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'index' %}">Confecciones AS</a>
+                <a class="navbar-mobile-link has-text-white" href="{% url 'Usuario1' %}">Mi cuenta</a>
+            </header>
+            <nav class="nav-menu --nav-dark-light" id="mySidenav">
+                <form class="form-group " action="#">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="text" class="form-group-input" placeholder="Buscar...">
+                    </div>
+                </form>
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark"
+                    href="{% url 'index' %}">Inicio</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item"><a href="{% url 'marca' %}" class="nav-menu-link">Nosotros</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'productos' %}"
+                            class="nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'Resgis' %}" class="nav-menu-link">Registro</a>
+                    </li>
+                    <li class="nav-menu-item"><a href="{% url 'login' %}" class="nav-menu-link">Iniciar
+                            Sesión</a></li>
+                    <li class="nav-menu-item"><a href="{% url 'contacto' %}"
+                            class="nav-menu-link">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="banner banner-second">
+        <div class="banner-container ">
+            <h1>Confecciones AS</h1>
+            <h2>"Nunca es suficiente ropa, El placer de vestir bien"</h2>
+        </div>
+    </div>
+    <div class="columns is-multiline is-centered align-items-center is-flex">
+        <div class="column is-one-quarter">
+            <figure class="image is-128x128 is-rounded">
+                <img src="{% static 'menu/img/avar2.jpg' %}" alt="Foto de perfil" id="profile-pic">
+            </figure>
+            <br>
+            <div class="file is-centered">
+                <label class="file-label">
+                    <input class="file-input" type="file" name="profile-pic" id="profile-pic-input">
+                    <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                            Cambiar foto de perfil
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="column is-three-quarters">
+            <form>
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Juan Pérez" value="Fixa Pilar">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Fixa.Pilar@gmail.com"
+                            value="Fixa.Pilar@gmail.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Dirección</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Arturo Pratt 343, Santiago"
+                            value="Arturo Pratt 343, Santiago">
+                    </div>
+                </div>
+                <div class="buttons is-centered">
+                    <button class="button is-link">Guardar cambios</button>
+                    <button class="button is-danger">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Información</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Acerca de</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Tienda</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Porqué comprar</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios y retornos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Envios seguros</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Testimonios </a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Concursos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Comercio Activo</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Tu cuenta</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'Resgis' %}">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="{% url 'EditarUs' %}">Cambiar Datos de cuenta</a>
+                    </ul>
+                </div>
+              
+                <div class="column">
+
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+                            <h3 class="has-text-weight-bold">Datos de contacto</h3>
+                        </li>
+                        <li class="footer-item"><a class="footer-link" href="#">Inicio</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Catálogos</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu historial</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
+                    </ul>
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="https://www.instagram.com/confecciones_as_/"><i
+                                class="zmdi zmdi-instagram"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">2023 Confecciones AS, todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.is-link').addEventListener('click', function() {
+          // Aquí puedes agregar el código para enviar los datos del formulario al servidor
+          // Una vez que se hayan guardado los cambios, puedes mostrar un mensaje de éxito
+          alert('Cambios guardados exitosamente!');
+        });
+      
+        document.querySelector('.is-danger').addEventListener('click', function() {
+          // Aquí puedes agregar el código para redirigir al usuario al index.html
+          window.location.href = 'index.html';
+        });
+    </script>>
+      
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
